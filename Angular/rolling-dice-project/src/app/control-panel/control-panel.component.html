@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-8">
+            <h3>Number of dice</h3>
+            <input #numberOfDice type="number" min="1" max="25" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-8">
+            <button (click)="onRoll(numberOfDice.value)">Roll</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-3 dices"></div>
+        <app-dice-panel [dices]="dices"></app-dice-panel>
+    </div>
+</div>

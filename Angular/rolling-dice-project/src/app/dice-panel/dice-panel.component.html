@@ -1,0 +1,25 @@
+<div class="col col-5 dices">
+    <div *ngFor="let dice of dices">
+        <div [ngSwitch]="dice">
+            <div *ngSwitchCase="1">
+                <app-dice-first-face></app-dice-first-face>
+            </div>
+            <div *ngSwitchCase="2">
+                <app-dice-second-face></app-dice-second-face>
+            </div>
+            <div *ngSwitchCase="3">
+                <app-dice-third-face></app-dice-third-face>
+            </div>
+            <div *ngSwitchCase="4">
+                <app-dice-fourth-face></app-dice-fourth-face>
+            </div>
+            <div *ngSwitchCase="5">
+                <app-dice-fifth-face></app-dice-fifth-face>
+            </div>
+            <div *ngSwitchCase="6">
+                <app-dice-sixth-face></app-dice-sixth-face>
+            </div>
+            <div *ngSwitchDefault>Uh oh! Something is wrong!</div>
+        </div>
+    </div>
+</div>

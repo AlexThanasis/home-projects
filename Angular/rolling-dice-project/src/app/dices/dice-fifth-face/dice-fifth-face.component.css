@@ -1,0 +1,36 @@
+.dot {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.dice {
+    padding: 4px;
+    background-color: lightgray;
+    width: 104px;
+    height: 104px;
+    border-radius: 10%;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.fourth-face,
+.sixth-face,
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column,
+.sixth-face .column,
+.fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+}

@@ -1,0 +1,6 @@
+<app-hero-search (emitSearchResult)="setCharacters($event)"></app-hero-search>
+<div class="gallery-container">
+    <div *ngFor="let character of characters">
+        <app-hero-image-thumbnail [name]="character.name" [imageUrl]="character.image.url"></app-hero-image-thumbnail>
+    </div>
+</div>

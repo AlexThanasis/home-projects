@@ -1,0 +1,25 @@
+.hero-image-element {
+    width: 220px;
+    border-radius: 5px;
+    margin: 8px 6px;
+}
+
+.hero-image-element:hover {
+    transform: scale(1.15);
+    transition: transform 320ms ease-in-out;
+}
+
+.hero-name {
+    color: whitesmoke;
+    background-color: rgba(100, 100, 100, 1.0);
+    padding: 20px 10px 10px 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    min-height: 28px;
+    border-radius: 5px 5px 0 0;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+}

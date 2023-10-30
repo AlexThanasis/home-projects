@@ -1,0 +1,5 @@
+<div class="measurement">
+    <button title="Add new bag" (click)="increment()">+1</button>
+    <span class="measuring">{{ count$ | async }}</span>
+    <button title="Reduce the number of bags" (click)="decrement()">-1</button>
+</div>

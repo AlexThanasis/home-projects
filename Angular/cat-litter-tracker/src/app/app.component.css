@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,700;1,400&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Bebas Neue, sans-serif;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    background: url("assets\cute-cat-cartoon-doodle-pastel-seamless-pattern-wallpaper_40564-122.jpg");
+}
+
+header {
+    display: flex;
+    min-height: 5vh;
+    margin: 0 0 5vh 0;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    min-height: 5vh;
+    margin: 5vh 0 0 0;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+nav a {
+    padding: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #e8e8e8;
+    color: #3d3d3d;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #42545C;
+}
+
+nav a:active {
+    background-color: black;
+}
+
+header .title {
+    padding: .1rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #3d3d3d;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin: 5px 20px 0 20px;
+}
+
+@media screen and (max-width: 600px) {
+   
+}

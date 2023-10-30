@@ -1,0 +1,28 @@
+.calendar {
+    width: 1000px;
+    margin: 0 10vw;
+
+}
+
+.today {
+    display: flex;
+}
+
+.displayed-dates {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .calendar {
+        width: 650px;
+        margin: 0 1vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .calendar {
+        width: auto;
+        margin: 0 1vw;
+    }
+}

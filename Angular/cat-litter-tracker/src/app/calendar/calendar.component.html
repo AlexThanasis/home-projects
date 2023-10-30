@@ -1,0 +1,15 @@
+<div class="calendar" *ngIf="displayedDates">
+    <div class="today">
+        <span>
+            {{ today | date: "yyyy. MMMM dd." }}
+        </span>
+    </div>
+    <hr>
+
+    <div class="displayed-dates">
+        <div *ngFor="let day of displayedDates">
+            <app-calendar-day [day]="day"></app-calendar-day>
+        </div>
+    </div>
+</div>
+<app-loader *ngIf="displayedDates.length === 0"></app-loader>

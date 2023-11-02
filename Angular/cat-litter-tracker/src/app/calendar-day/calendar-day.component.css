@@ -15,11 +15,12 @@
 }
 
 .is-selected {
-
+    box-shadow: 0 0 0 5px rgba(0, 160, 51, 0.626);
 }
 
 .calendar-day:hover :not(.is-past) {
-    transform: scale(1.02);
+    transform: scale(1.10);
+    transition: transform 120ms ease-in-out;
 }
 
 .day-title {
@@ -43,12 +44,22 @@
     font-weight: 500;
 }
 
-.is-past {
+.past {
     background-color: rgba(211, 211, 211, 0.3);
+    color: rgba(100, 100, 100, 0.9);
 }
 
-.is-today {
+.today {
     background-color: rgba(255, 160, 122, 0.3);
+}
+
+.future {
+    
+}
+
+.date-selector-mode {
+    border: 0.1rem solid lightseagreen ;
+    background-color: rgba(0, 160, 50, 0.3);
 }
 
 @media screen and (max-width: 1000px) {

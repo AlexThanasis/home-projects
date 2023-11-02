@@ -1,14 +1,21 @@
 <div class="calendar" *ngIf="displayedDates">
     <div class="today">
         <span>
-            {{ today | date: "yyyy. MMMM dd." }}
+            {{ today.date | date: "MMMM dd." }}
         </span>
+    </div>
+    <div class="day-selector">
+        <button (click)="onActivateDateSelectorMode(!isDateSelectorMode)">SELECT DAYS</button>
     </div>
     <hr>
 
     <div class="displayed-dates">
         <div *ngFor="let day of displayedDates">
-            <app-calendar-day [day]="day"></app-calendar-day>
+            <app-calendar-day 
+                (selectedDateEmitter)="onAddSelectedDate($event)"
+                [dateSelectorMode]="isDateSelectorMode" 
+                [day]="day"
+            ></app-calendar-day>
         </div>
     </div>
 </div>

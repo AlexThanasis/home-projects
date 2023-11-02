@@ -1,10 +1,10 @@
-<div class="calendar-day" [ngClass]="isToday ? 'is-today' : isPast ? 'is-past' : ''">
+<div class="calendar-day" [ngClass]="setClassCustom()" (click)="selectDate()">
     <div class="day-title">
         <span class="calendar-day__day">
-            {{ day | date: "EEE" | uppercase }}
+            {{ day.date | date: "EEE" | uppercase }}
         </span>
         <span class="calendar-day__date">
-            {{ day | date: "MMM dd." }}
+            {{ day.date | date: "MMM dd." }}
         </span>
     </div>
 </div>

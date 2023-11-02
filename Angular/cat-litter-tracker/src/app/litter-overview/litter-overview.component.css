@@ -1,0 +1,34 @@
+.litter-overview__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    min-height: 500px;
+    width: 60vw;
+}
+
+.litter-overview-element {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.2);
+    padding: 15px 25px;
+}
+
+.litter-overview__amount__amount {
+    font-size: 1.5rem;
+    padding: 0 5px;
+}
+
+.litter-overview-element:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease-in-out;
+}
+
+.litter-overview__future-warn {
+    color: rgba(255, 17, 0, 0.6);
+}
+
+.litter-overview__future-ok {
+    color: darkgreen;
+}

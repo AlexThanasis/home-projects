@@ -6,6 +6,8 @@ import { Injectable, OnInit } from '@angular/core';
 export class LitterService implements OnInit {
   constructor() { }
   ngOnInit(): void {
+    console.log("LitterService");
+    
     document.cookie = `amountOfLitterBags=10;`;
   }
 
@@ -23,7 +25,7 @@ export class LitterService implements OnInit {
     return +amount;
   }
 
-  increaseAmountOfBags(delta: number) {
+  setAmountOfBags(delta: number): void {
     let cookie = document.cookie;
     let amount = cookie.split(';')[0].split('=')[1];
     

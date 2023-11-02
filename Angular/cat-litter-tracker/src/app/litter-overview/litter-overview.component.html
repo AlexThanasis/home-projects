@@ -1,1 +1,17 @@
-<p>litter-overview works!</p>
+<div class="litter-overview__container">
+    <span class="litter-overview-element litter-overview__title">Litter Overview feature coming soon!</span>
+    <span class="litter-overview-element litter-overview__amount__text">
+        Available amount of bags of litter:
+        <span class="litter-overview__amount__amount">{{ amountAvailable }}</span>
+    </span>
+    <span class="litter-overview-element litter-overview__future">
+        <span *ngIf="amountShouldBeBought !== 0" class="litter-overview__future-warn">
+            For the next two weeks 
+            <span class="litter-overview__amount__amount">{{ amountShouldBeBought }}</span>
+            bags of litter should be bought 🙀
+        </span>
+        <span *ngIf="amountShouldBeBought === 0"  class="litter-overview__future-ok">
+            For the next two weeks You are fine with the litter 😸✔
+        </span>
+    </span>
+</div>

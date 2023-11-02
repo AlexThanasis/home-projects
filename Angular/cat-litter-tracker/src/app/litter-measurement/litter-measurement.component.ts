@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LitterService } from '../litter.service';
+// import { LitterService } from '../litter.service';
 import { Store, select } from '@ngrx/store';
 import { increment, decrement, reset } from '../state/litter.actions';
 import { Observable } from 'rxjs';
@@ -10,15 +10,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./litter-measurement.component.css']
 })
 export class LitterMeasurementComponent implements OnInit {
-  // bagsOfLitter = 0;
-
-  // constructor(private litterService: LitterService) {
-
-  // }
-  // ngOnInit(): void {
-  //   this.bagsOfLitter = this.getAmountOfBagsOfLitter();
-  // }
-
   public count$: Observable<number> | undefined;
 
   constructor(private store: Store<{ count: number }>) {}
@@ -38,13 +29,4 @@ export class LitterMeasurementComponent implements OnInit {
   public reset() {
     this.store.dispatch(reset());
   }
-
-  // getAmountOfBagsOfLitter = (): number => {
-  //   const amount = this.litterService.getAmountOfBags();
-  //   return amount ? amount : 0;
-  // }
-
-  // setAmountOfBagsOfLitter = (delta: number) => {
-  //   this.litterService.increaseAmountOfBags(delta);
-  // }
 }

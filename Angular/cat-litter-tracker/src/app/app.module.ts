@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarDayComponent } from './calendar-day/calendar-day.component';
-import { CalendarWeekComponent } from './calendar-week/calendar-week.component';
 import { LoaderComponent } from './loader/loader.component';
 import { LitterOverviewComponent } from './litter-overview/litter-overview.component';
 import { LitterMeasurementComponent } from './litter-measurement/litter-measurement.component';
@@ -20,7 +19,6 @@ import { litterReducer } from './state/litter.reducer';
     DashboardComponent,
     CalendarComponent,
     CalendarDayComponent,
-    CalendarWeekComponent,
     LoaderComponent,
     LitterOverviewComponent,
     LitterMeasurementComponent

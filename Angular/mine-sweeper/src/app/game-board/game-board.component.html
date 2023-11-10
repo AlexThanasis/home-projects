@@ -1,0 +1,38 @@
+<div class="game-board-container">
+    <div *ngIf="gameState==='not-started'" class="game-options">
+        <div class="input-field">
+            <label class="label-title" for="width">Width:</label>
+            <input id="width" type="number" min="1" max="150" value="10" #width />
+        </div>
+        <div class="input-field">
+            <label class="label-title" for="height">Height:</label>
+            <input id="height" type="number" min="1" max="100" value="10" #height />
+        </div>
+        <div class="input-field">
+            <label class="label-title" for="mines">Mines:</label>
+            <input id="mines" type="number" min="1" max="1000" value="5" #mines />
+        </div>
+        <div class="button-container">
+            <button class="start-button" type="button" (click)="onStart(+width.value, +height.value, +mines.value)">Start Game</button>
+        </div>
+    </div>
+    <div *ngIf="gameState!=='not-started'" class="game-board">
+        <div class="score-board-container">
+            <div>
+                <span></span>
+            </div>
+            <div>
+                <span class="score-title">Mines left: </span>
+                <span class="score-title">{{mines - flags}}</span>
+            </div>
+        </div>
+        <div class="row-cells" *ngFor="let row of gameBoard; let rowIndex = index">
+            <div *ngFor="let cell of row; let colIndex = index">
+                <app-cell [cell]="cell" (click)="onClick(cell, rowIndex, colIndex)" (contextmenu)="onContextmenu($event, cell)"></app-cell>
+            </div>
+        </div>
+        <div *ngIf="gameState==='lost'||gameState==='won'" class="restart-container">
+            <button type="button" (click)="onRestart()">Restart</button>
+        </div>
+    </div>
+</div>

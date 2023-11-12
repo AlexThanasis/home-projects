@@ -1,0 +1,31 @@
+.game-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 20vh;
+}
+
+.label-title {
+    font-size: 1.3rem;
+    margin: 5px 10px;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    min-width: 220px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.diffucilty-level-container > button {
+    margin: 5px 10px;    
+}
+
+.separator-text {
+    margin: 40px;
+}

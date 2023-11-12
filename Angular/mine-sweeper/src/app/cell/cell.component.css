@@ -10,8 +10,7 @@
     background-color: gray;
 }
 
-.undiscovered {
-    /* border: 3px solid white; */
+.undiscovered, .flagged {
     background-color: lightgrey;
     border-top: 1px solid white;
     border-left: 1px solid white;
@@ -19,9 +18,46 @@
     border-right: 1px solid darkgrey;
 }
 
-.clicked {
+.undiscovered:hover {
+    background-color: rgba(220, 200, 200, 1.0);
+}
+
+.clicked, .discovered {
     border: 1px solid white;
     background-color: gray;
+    font-weight: 700;
+}
+
+.discovered-1 {
+    color: blue;
+}
+
+.discovered-2 {
+    color: green;
+}
+
+.discovered-3 {
+    color: red;
+}
+
+.discovered-4 {
+    color: yellow;
+}
+
+.discovered-5 {
+    color: purple;
+}
+
+.discovered-6 {
+    color: orange;
+}
+
+.discovered-7 {
+    color: darkblue;
+}
+
+.discovered-8 {
+    color: brown;
 }
 
 .explosion {

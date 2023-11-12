@@ -8,9 +8,13 @@
     background: whitesmoke;
     margin: auto auto;
     padding: 20px;
+
+    transition: all 1s ease-out;
+
 }
 
 .game-board {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,13 +22,8 @@
     height: 90%;
     width: fit-content;
     padding: 10px;
-}
 
-.score-board-container {
-    display: flex;
-    justify-content: space-around;
-    min-height: 10%;
-    width: 100%;
+    transition: all 1s ease-out;
 }
 
 .row-cells {
@@ -45,35 +44,12 @@
     align-items: center;
 }
 
-.game-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 20vh;
-}
-
-.label-title {
-    font-size: 1.3rem;
-    margin: 5px 10px;
-}
-
-.input-field {
-    display: flex;
-    justify-content: space-between;
-    min-width: 220px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.score-title {
-    font-size: 1.2rem;
-}
-
 .restart-container {
     display: flex;
     margin: 20px 40px;
+}
+
+.score-board-container {
+    min-height: 10%;
+    width: 100%;
 }

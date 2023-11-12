@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cell } from '../models/cell';
 
 @Component({
@@ -13,28 +13,28 @@ export class CellComponent implements OnInit {
 
   getClassForCell = (): string => {
     let classString = 'undiscovered';
+    
     if (this.cell.covered === 'flagged') {
       classString = 'flagged';
-    } else if (this.cell.covered === 'clicked' || this.cell.covered === 'discovered') {
-      classString = this.cell.isMine ? 'explosion' : 'empty';
-    } else {
-      classString = 'undiscovered';
-    } 
+    } else if (this.cell.covered === 'discovered' && !this.cell.isMine) {
+      classString = `discovered${this.cell.surroundingMines ? '-' + this.cell.surroundingMines : ''}`;
+
+    } else if (this.cell.isClicked && this.cell.isMine) {
+      classString = 'explosion';
+    }
     return classString;
   }
 
   getElementForCell = (): string => {
-    return this.cell.covered === 'undiscovered' 
-    ? ' ' 
-    : this.cell.covered === 'flagged'
+    return this.cell.covered === 'flagged'
       ? '📍'
-      : this.cell.covered === 'clicked' && this.cell.isMine
+      : this.cell.isClicked && this.cell.isMine
         ? '💥'
-        : this.cell.covered === 'clicked' && !this.cell.isMine
+        : (this.cell.isClicked || this.cell.covered === 'discovered') && !this.cell.isMine
           ? this.getNumberOfBombsSurrounding()
           : this.cell.covered === 'discovered' && this.cell.isMine
             ? '💣'
-            : '';
+            : ' ';
   }
 
   getNumberOfBombsSurrounding = () =>  {

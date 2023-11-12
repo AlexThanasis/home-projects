@@ -1,5 +1,6 @@
 export interface Cell {
-    covered: 'undiscovered' | 'clicked' | 'flagged' | 'discovered';
-    surroundingMines?: number;
+    covered: 'undiscovered' | 'flagged' | 'discovered';
     isMine: boolean;
+    surroundingMines?: number;
+    isClicked?: boolean;
 }

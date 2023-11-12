@@ -15,7 +15,7 @@ export class GameService {
       .map(u => {return { isMine: true, covered: 'undiscovered' };})
       .concat(Array(size.width * size.height - mines)
       .fill(undefined)
-      .map(u => {return { isMine: false, covered: 'undiscovered' };}))
+      .map(_ => {return { isMine: false, covered: 'undiscovered' };}))
       .sort(() => Math.random() - 0.5)
       .reduce((rows: any, key: any, i: number) => (i % size.width === 0 ? rows.push([key]) : rows[rows.length-1].push(key)) && rows, []);
   }

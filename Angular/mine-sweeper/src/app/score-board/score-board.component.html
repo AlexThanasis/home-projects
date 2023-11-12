@@ -1,0 +1,7 @@
+<div class="score-board">
+    <app-timer [toggleTimer]="toggleTimer"></app-timer>
+    <div class="score-face">{{ gameState === 'started' ? '😄' : gameState === 'won' ? '😎' : '🥴'}}</div>
+    <div>
+        <span [ngClass]="remainingMines < 0 ? 'more-flags-error': ''" class="score-title">Mines left: {{remainingMines}}</span>
+    </div>
+</div>

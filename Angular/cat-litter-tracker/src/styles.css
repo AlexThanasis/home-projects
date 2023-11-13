@@ -43,3 +43,9 @@ button:active {
     transform: translate(0, 0.3rem);
     box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}

@@ -14,4 +14,11 @@
             For the next two weeks You are fine with the litter 😸✔
         </span>
     </span>
+    <div class="options">
+        <div class="measurement">
+            <button title="Add new bag" (click)="changeDaysOfBagsLasts(+1)">+1</button>
+            <span class="measuring">{{ daysOfBagsLasts }}</span>
+            <button title="Reduce the number of bags" (click)="changeDaysOfBagsLasts(-1)">-1</button>
+        </div>
+    </div>
 </div>

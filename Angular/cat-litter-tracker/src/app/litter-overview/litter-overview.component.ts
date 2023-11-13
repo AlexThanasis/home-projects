@@ -10,6 +10,7 @@ export class LitterOverviewComponent implements OnInit {
   amountShouldBeBought: number = 0;
   weeksToBeWatched = 2;
   bagsOfLitterConsumedPerChange = 1;
+  daysOfBagsLasts = 7;
 
   ngOnInit(): void {
     this.amountAvailable = this.getAmountAvailable();
@@ -23,5 +24,9 @@ export class LitterOverviewComponent implements OnInit {
 
   getAmountShouldBeBought = (amountAvailable: number): number => {
     return amountAvailable >= this.bagsOfLitterConsumedPerChange * this.weeksToBeWatched ? 0 : this.bagsOfLitterConsumedPerChange * this.weeksToBeWatched - amountAvailable; 
+  }
+
+  changeDaysOfBagsLasts = (delta: number) => {
+    this.daysOfBagsLasts = this.daysOfBagsLasts + delta;
   }
 }

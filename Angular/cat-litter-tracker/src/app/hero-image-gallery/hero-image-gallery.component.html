@@ -1,9 +1,0 @@
-<app-hero-search (emitSearchResult)="setCharacters($event)"></app-hero-search>
-<div *ngIf="characters" class="gallery-container">
-    <div *ngFor="let character of characters">
-        <app-hero-image-thumbnail [name]="character.name" [imageUrl]="character.image.url"></app-hero-image-thumbnail>
-    </div>
-</div>
-<div *ngIf="characters.length === 0" class="error">
-    There are no heroes to show
-</div>
